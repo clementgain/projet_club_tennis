@@ -9,7 +9,7 @@ col1, col2 = st.columns(2)
 with col1:
     prix_adh_tennis = st.number_input(
         "Prix de l'adhésion Padel si déjà adhérent Tennis (€)",
-        min_value=0.0, step=10.0, value=50.0, format="%.2f",
+        min_value=0.0, step=10.0, value=30.0, format="%.2f",
         help="Montant payé par un adhérent Tennis pour ajouter l'option Padel."
     )
     nb_adh_tennis = st.number_input(
@@ -20,7 +20,7 @@ with col1:
 with col2:
     prix_adh_seul = st.number_input(
         "Prix de l'adhésion Padel seul (€)",
-        min_value=0.0, step=10.0, value=120.0, format="%.2f",
+        min_value=0.0, step=10.0, value=100.0, format="%.2f",
         help="Montant pour une adhésion Padel sans adhésion Tennis."
     )
     nb_adh_seul = st.number_input(
@@ -35,12 +35,12 @@ col3, col4 = st.columns(2)
 with col3:
     prix_resa_adh = st.number_input(
         "Prix de la réservation 1h30 — adhérent (par joueur) (€)",
-        min_value=0.0, step=1.0, value=6.0, format="%.2f",
+        min_value=0.0, step=1.0, value=4.0, format="%.2f",
         help="Prix payé par un adhérent, pour 1h30, par joueur."
     )
     nb_pistes_par_jour = st.slider(
         "Nombre moyen de pistes réservées par jour (toutes pistes confondues)",
-        min_value=0.0, max_value=48.0, value=10.0, step=0.5,
+        min_value=0.0, max_value=48.0, value=4.0, step=0.5,
         help=(
             "Total quotidien de créneaux réservés. "
             "Ex: si vous avez 2 pistes ouvertes 12h/jour avec créneaux de 1h30, "
@@ -55,7 +55,7 @@ with col4:
     )
     prop_adh_resa = st.slider(
         "Proportion d'adhérents dans les réservations",
-        min_value=0.0, max_value=1.0, value=0.6, step=0.05,
+        min_value=0.0, max_value=1.0, value=0.3, step=0.05,
         help="Part des joueurs réservant qui sont adhérents (entre 0 et 1)."
     )
 
