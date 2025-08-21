@@ -40,7 +40,7 @@ with col3:
     )
     nb_pistes_par_jour = st.slider(
         "Nombre moyen de pistes réservées par jour (toutes pistes confondues)",
-        min_value=0.0, max_value=48.0, value=4.0, step=0.5,
+        min_value=0.0, max_value=16.0, value=4.0, step=0.5,
         help=(
             "Total quotidien de créneaux réservés. "
             "Ex: si vous avez 2 pistes ouvertes 12h/jour avec créneaux de 1h30, "
