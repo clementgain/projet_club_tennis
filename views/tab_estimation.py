@@ -19,7 +19,7 @@ def render_tab_estimation():
         st.markdown("**Réservations** (1h30, 4 joueurs/piste)")
         prix_resa_adh = st.number_input("Prix réservation — adhérent (€/joueur)", min_value=0.0, value=6.0, step=1.0)
         prix_resa_nonadh = st.number_input("Prix réservation — non adhérent (€/joueur)", min_value=0.0, value=10.0, step=1.0)
-        nb_pistes_par_jour = st.slider("Nombre moyen de pistes réservées / jour (toutes pistes)", 0.0, 48.0, 10.0, 0.5)
+        nb_pistes_par_jour = st.slider("Nombre moyen de pistes réservées / jour (toutes pistes)", 0.0, 15.0, 4.0, 0.5)
         prop_adh_resa = st.slider("Proportion d'adhérents dans les réservations", 0.0, 1.0, 0.6, 0.05)
 
     inp = BaseInputs(

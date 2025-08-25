@@ -10,17 +10,17 @@ def render_tab_tournois():
         n_soirees = st.number_input("Soirées / an", 0, 100, 6, key="tour_n_soirees")
         prix_soiree = st.slider("Prix joueur — Soirée", 20.0, 25.0, 22.5, 0.5, key="tour_prix_soiree")
         eq_s = st.number_input("Équipes — Soirée", 2, 64, 8, key="tour_eq_s")
-        duree_s = st.slider("Durée Soirée (j)", 0.25, 1.0, 0.5, 0.25, key="tour_duree_s")
+        duree_s = st.slider("Durée Soirée (j)", 0.25, 1.0, 0.5, 0.25, key="tour_duree_s", help="Pour l'estimation du cout du JA")
     with col2:
         n_journees = st.number_input("Journées / an", 0, 100, 6, key="tour_n_journees")
         prix_journee = st.slider("Prix joueur — Journée", 20.0, 25.0, 22.5, 0.5, key="tour_prix_journee")
         eq_j = st.number_input("Équipes — Journée", 2, 64, 12, key="tour_eq_j")
-        duree_j = st.slider("Durée Journée (j)", 0.5, 2.0, 1.0, 0.5, key="tour_duree_j")
+        duree_j = st.slider("Durée Journée (j)", 0.5, 2.0, 1.0, 0.5, key="tour_duree_j", help="Pour l'estimation du cout du JA")
     with col3:
         n_deux = st.number_input("Tournois 2 jours / an", 0, 100, 0, key="tour_n_deux")
         prix_deux = st.slider("Prix joueur — 2 jours", 20.0, 25.0, 22.5, 0.5, key="tour_prix_deux")
         eq_2 = st.number_input("Équipes — 2 jours", 2, 64, 20, key="tour_eq_2")
-        duree_2 = st.slider("Durée 2 jours (j)", 1.0, 3.0, 2.0, 0.5, key="tour_duree_2")
+        duree_2 = st.slider("Durée 2 jours (j)", 1.0, 3.0, 2.0, 0.5, key="tour_duree_2", help="Pour l'estimation du cout du JA")
 
     st.markdown("---")
     colx, coly, colz = st.columns(3)

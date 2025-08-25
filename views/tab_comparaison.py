@@ -29,13 +29,13 @@ def render_tab_comparaison():
         prix_adh_unique = st.number_input("Prix adhésion (€/an)", 0.0, 1000.0, 140.0, 5.0, key="comp_prix_adh")
         nb_adh = st.number_input("Nombre d'adhérents", 0, 5000, 200, 10, key="comp_nb_adh")
         prix_nonadh = st.number_input("Prix non-adhérent (€/joueur)", 0.0, 50.0, 7.0, 0.5, key="comp_prix_nonadh")
-        nb_resa_A = st.slider("Réservations/jour (Formule A)", 0, cap, min(cap, 10), key="comp_nb_resa_A")
+        nb_resa_A = st.slider("Réservations/jour (Formule A)", 0, cap, min(cap, 4), key="comp_nb_resa_A")
         prop_adh_A = st.slider("Proportion d'adhérents dans les réservations", 0.0, 1.0, 0.6, 0.05, key="comp_prop_adh")
 
     with colb:
         st.markdown("**Formule B — Location horaire pour tous**")
         prix_loc = st.number_input("Prix (€/joueur)", 0.0, 50.0, 7.0, 0.5, key="comp_prix_loc")
-        nb_resa_B = st.slider("Réservations/jour (Formule B)", 0, cap, min(cap, 10), key="comp_nb_resa_B")
+        nb_resa_B = st.slider("Réservations/jour (Formule B)", 0, cap, min(cap, 4), key="comp_nb_resa_B")
 
     st.markdown("---")
     st.markdown("### Tournois (communs aux deux formules)")
